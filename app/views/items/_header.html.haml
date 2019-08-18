@@ -1,0 +1,18 @@
+%div.left-header
+  title
+%div.right-header
+  .form
+    = form_for "/item" do |f|
+      .form-name
+        = f.label :name, "品名"
+        = f.text_field :name
+      .form-characteristics
+        = f.label :characteristics, "特徴"
+        = f.text_field :characteristics
+      .form-image
+        = f.label :image, "写真"
+        = f.file_field :image, class: 'form-image__hidden'  
+      = f.submit "Send"
+      
+      
+      
