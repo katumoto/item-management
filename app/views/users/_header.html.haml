@@ -1,0 +1,20 @@
+%div.left-header
+  title
+%div.right-header
+  = form_for @user, html: {class: 'form'} do |f|
+    .form-list
+      = f.label :name, "名前"
+      = f.text_field :name
+    .form-list
+      = f.label :gender, "性別"
+      = f.text_field :gender
+    .form-list
+      = f.label :birthday, "誕生日"
+      = f.text_field :birthday 
+    .form-list
+      = f.label :address, "住所"
+      = f.text_field :address
+    .form-list
+      = f.label :job, "仕事"
+      = f.text_field :job
+    = f.submit "Send"

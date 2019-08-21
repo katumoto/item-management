@@ -1,0 +1,8 @@
+.header
+  = render partial: "users/new"
+  
+.main
+  = render partial: 'users/main', locals: { users: @users }
+  
+.footer
+  = render 'items/footer'

@@ -2,16 +2,17 @@
   title
 %div.right-header
   .form
-    = form_for "/item" do |f|
-      .form-name
+    - @item = Item.new unless @item
+    = form_for '/items' do |f|
+      .form-list
         = f.label :name, "品名"
         = f.text_field :name
-      .form-characteristics
+      .form-list
         = f.label :characteristics, "特徴"
         = f.text_field :characteristics
-      .form-image
-        = f.label :image, "写真"
-        = f.file_field :image, class: 'form-image__hidden'  
+      .form-list
+        = f.label :image_id, "写真"
+        = f.file_field :image_id, class: 'form-image__hidden'  
       = f.submit "Send"
       
       

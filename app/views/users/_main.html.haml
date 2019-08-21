@@ -1,0 +1,60 @@
+.left-content
+  %div.user-list
+    - users.each do |user|
+      %div.user-list__information
+        %p.number
+          番号: #{user.id}
+        %p.address
+          住所: #{user.address}
+        %p.work
+          職業: #{user.job}
+        %p.birthday
+          生年月日: #{user.birthday}
+        %p.name
+          氏名: #{user.name}
+        
+.right-content
+  %div.item-column
+    %div.item-column__number
+      番号
+    %div.item-column__name
+      品名
+    %div.item-column__characteristic
+      特徴
+    %div.item-column__image
+      写真
+  %div.item-box
+    %div.item-list
+      %div.item-list__number.list
+        1
+      %div.item-list__name.list
+        財布
+      %div.item-list__characteristic.list
+        長財布
+        %br/
+        黒色
+        %br/
+        革製
+        %br/
+      %div.item-list__image.list
+
+    %div.item-list
+      %div.item-list__number.list
+        2
+      %div.item-list__name.list
+        携帯電話
+        %br/
+      %div.item-list__characteristic.list
+        iphoneX
+        %br/
+        %br/
+      %div.item-list__image.list
+
+    %div.item-list
+      %div.item-list__number.list
+        3
+      %div.item-list__name.list
+        鍵
+      %div.item-list__characteristic.list
+        家の鍵
+      %div.item-list__image.list

@@ -20,13 +20,7 @@ html, body {
       background-color: dimgrey;
       height: 100%;
       
-      &-name {
-        float: left;
-      }
-      &-characteristics {
-        float: left;
-      }
-      &-image {
+      &-list {
         float: left;
         &__hidden {
           
@@ -44,9 +38,9 @@ html, body {
     height: 100%;
     width: 20%;
     background-color: antiquewhite;
-    overflow: hidden;
+    overflow: scroll;
     .user-list {
-      overflow: scroll;
+  
       &__information {
         border: 10px ridge #eb6101;
         background-color: white;
