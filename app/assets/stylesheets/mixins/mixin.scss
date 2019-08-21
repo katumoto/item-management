@@ -1,0 +1,21 @@
+@mixin flexiblebox() {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+  align-items: center; /* 縦方向中央揃え */
+  -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+  justify-content: center; /* 横方向中央揃え */
+ }
+
+ @mixin borderItemList1() {
+   border-top: 3px solid black;
+   border-right: 3px solid black;
+   border-bottom: 3px solid black;
+   border-left: 3px solid black;
+ }
+
+ @mixin borderItemList2() {
+   border-top: 3px solid black;
+   border-right: 3px solid black;
+   border-bottom: 3px solid black;
+ }
