@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
+  before_action :set_user
   def index
-    @items  = Item.all
+    @item = Item.new
+    @users = User.all
+    @items  = @user.items.all
   end
 
   def new
@@ -8,8 +11,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(item_params)
-    redirect_to root_path
+    @item = @user.items.create(item_params)
+    redirect_to user_items_path
   end
 
   def edit
@@ -23,6 +26,10 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :characteristics, :image_id)
+    params.require(:item).permit(:name, :characteristics, :image_id).merge(user_id: params[:id])
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
   end
 end

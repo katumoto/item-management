@@ -44,6 +44,10 @@ html, body {
       &__information {
         border: 10px ridge #eb6101;
         background-color: white;
+        .user-link {
+          text-decoration: none;
+          color: black;
+        }
       }
     }
   }
@@ -70,7 +74,7 @@ html, body {
         text-align: center;
         @include borderItemList2();
       }
-      &__characteristic {
+      &__characteristics {
         width: 30%;
         text-align: center;
         @include borderItemList2();
@@ -100,7 +104,7 @@ html, body {
           width: 40%;
           @include borderItemList2();
         }
-        &__characteristic {
+        &__characteristics {
           width: 30%;
           @include borderItemList2();
         }

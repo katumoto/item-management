@@ -1,5 +1,5 @@
 .header
-  = render partial: "users/new"
+  = render partial: 'users/new', locals: { user: @user } 
   
 .main
   = render partial: 'users/main', locals: { users: @users }

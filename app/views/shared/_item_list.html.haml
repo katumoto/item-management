@@ -1,0 +1,19 @@
+%div.item-column
+  %div.item-column__number
+    番号
+  %div.item-column__name
+    品名
+  %div.item-column__characteristics
+    特徴
+  %div.item-column__image
+    写真
+%div.item-box
+  - items.each do |item|
+    %div.item-list
+      %div.item-list__number.list
+        = item.id
+      %div.item-list__name.list
+        = item.name
+      %div.item-list__characteristics.list
+        = item.characteristics
+      %div.item-list__image.list
