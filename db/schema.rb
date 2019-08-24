@@ -23,11 +23,13 @@ ActiveRecord::Schema.define(version: 20190818103606) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "sub_id"
     t.string   "name"
     t.text     "characteristics", limit: 65535
     t.integer  "user_id",                       null: false
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.index ["sub_id"], name: "index_items_on_sub_id", using: :btree
     t.index ["user_id"], name: "index_items_on_user_id", using: :btree
   end
 
