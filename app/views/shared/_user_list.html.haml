@@ -1,0 +1,14 @@
+%div.user-list
+- users.each do |user|
+  %div.user-list__information
+    = link_to user_items_path(user), class: "user-link" do
+      %p.number
+        番号: #{user.id}
+      %p.address
+        住所: #{user.address}
+      %p.work
+        職業: #{user.job}
+      %p.birthday
+        生年月日: #{user.birthday}
+      %p.name
+        氏名: #{user.name}

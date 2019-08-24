@@ -1,8 +1,8 @@
 .header
-  = render 'items/header'
+  = render partial: 'items/header', locals: { user: @user, item: @item }
   
 .main
-  = render 'items/main'
+  = render partial: 'items/main', locals: { users: @users, items: @items }
   
 .footer
   = render 'items/footer'

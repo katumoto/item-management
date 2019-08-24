@@ -2,8 +2,7 @@
   title
 %div.right-header
   .form
-    - @item = Item.new unless @item
-    = form_for '/items' do |f|
+    = form_for [ user, item ] do |f|
       .form-list
         = f.label :name, "品名"
         = f.text_field :name
